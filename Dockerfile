@@ -1,10 +1,5 @@
 FROM golang:1.13.0-stretch AS builder
 
-ARG BRANCH=$(git rev-parse --abbrev-ref HEAD)
-ARG COMMIT=$(git rev-parse --short HEAD)
-LABEL branch=${BRANCH}
-LABEL commit=${COMMIT}
-
 ENV GO111MODULE=on \
     CGO_ENABLED=1
 
