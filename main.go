@@ -83,15 +83,19 @@ func main() {
 	}
 
 	// Start Server
-	go func() {
-		logger.Info("Starting Server", address)
-		if err := srv.ListenAndServe(); err != nil {
-			logger.Fatal(err)
-		}
-	}()
+	//go func() {
+	//	logger.Info("Starting Server", address)
+	//	if err := srv.ListenAndServe(); err != nil {
+	//		logger.Fatal(err)
+	//	}
+	//}()
+	logger.Info("Starting Server", address)
+	if err := srv.ListenAndServe(); err != nil {
+		logger.Fatal(err)
+	}
 
 	// Graceful Shutdown
-	waitForShutdown(srv)
+	//waitForShutdown(srv)
 }
 
 func waitForShutdown(srv *http.Server) {
