@@ -17,7 +17,7 @@ import (
 var logger = logging.MustGetLogger("example")
 
 var format = logging.MustStringFormatter(
-	"%{color}%{time} %{level:.4s} %{color:reset}%{message}",
+	"%{time} %{level:.4s} %{message}",
 )
 
 func init() {
